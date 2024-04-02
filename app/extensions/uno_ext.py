@@ -566,11 +566,6 @@ class Uno(Cog):
             default=7,
         ),
     ):
-        if not isinstance(interaction.channel, nextcord.Thread):
-            await interaction.send(
-                "Uno can only be played in a thread.", ephemeral=True
-            )
-            return
         await interaction.response.defer(ephemeral=True)
         if interaction.channel.id in ongoing_games:
             await interaction.send(
