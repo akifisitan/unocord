@@ -5,7 +5,7 @@
  </h1>
 </p>
 
-unocord is a bot which allows server members to play Uno.
+unocord is a Discord bot which allows server members to play Uno.
 
 ![hero](assets/hero.png)
 
