@@ -7,7 +7,7 @@ load_dotenv()
 
 DEV = os.environ.get("PY_ENV") != "PROD"
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("BOT_TOKEN" if not DEV else "BOT_TOKEN_DEV")
 
 SERVER_IDS = [
     int(server_id)
@@ -23,4 +23,7 @@ firebase_init(
     {"databaseURL": FIREBASE_DB_URL},
 )
 
-firebase_database = db.reference("/unobotdb-dev" if DEV else "/unobotdb")
+FIREBASE_DB_NAME = os.environ.get(
+    "FIREBASE_DB_NAME" if not DEV else "FIREBASE_DB_NAME_DEV"
+)
+firebase_database = db.reference(f"/{FIREBASE_DB_NAME}")
