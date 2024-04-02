@@ -18,6 +18,8 @@ unocord is a bot which allows server members to play Uno.
 
 ## Demo
 
+https://github.com/akifisitan/unocord/assets/102677971/c03d7369-2735-429b-8f3b-1ffa028b67ee
+
 ## Commands
 
 - `/uno play` - Start a game of Uno
